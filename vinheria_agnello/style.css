@@ -61,13 +61,19 @@ a:hover {
 .header, .container__section {
     height: 100vh;
     width: 100vw;
+    position: relative;
 }
 
 .container__grid {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 0px 40px 0px 40px;
+    margin: 0px 40px 0px 50px;
+}
+
+.divisor {
+    width: 20rem;
+    align-self: center;
 }
 
 /* SEGUNDA SECTION MADE FOR YOU */
@@ -107,7 +113,14 @@ a:hover {
     background-color: white;
     padding: 40px 60px;
     border-radius: 10px;
-    box-shadow: 0px 4px 4px;
+    box-shadow: 0px 4px 8px;
+}
+
+.Background__Madeforyou {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 /* CONFIGURAÇÕES DE FORMATAÇÃO GERAIS */
@@ -125,10 +138,12 @@ a:hover {
 
 .black {
     background-color: black;
+    z-index: -2;
 }
 
 .subtitulo {
     font-family: "GFS Didot", serif;
+    font-weight: 100;
     font-size: 36px;
     color: white;
 }
