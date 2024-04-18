@@ -10,11 +10,28 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+  /* Tamnho da Barra de Rolagem */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Fundo da Barra de Rolagem */
+  ::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+  }
+  
+  /* Cor da Barra de Rolagem */
+  ::-webkit-scrollbar-thumb {
+    background: #891E19;
+  }
+  
+  /* Cor da Barra de Rolagem ao passar por cima */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #60100c;
+  }
 
 /* PRMEIRA SECTION (HEADER) */
 
