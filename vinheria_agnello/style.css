@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -17,7 +22,10 @@ body {
 
 .texto__header {
     margin-bottom: 44px;
-    line-height: 11px;
+}
+
+.texto__header .titulo img {
+    margin-bottom: -50px;
 }
 
 /* NAV */
@@ -60,7 +68,9 @@ a:hover {
 
 .header, .container__section {
     height: 100vh;
+    max-height: 1440px;
     width: 100vw;
+    max-width: 1200x;
     position: relative;
 }
 
@@ -68,19 +78,24 @@ a:hover {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 0px 40px 0px 50px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .divisor {
-    width: 20rem;
-    align-self: center;
+    border-bottom: 1px solid white;
+    width: 30%;
+    margin: 0 auto;
 }
 
 /* SEGUNDA SECTION MADE FOR YOU */
 
 .container__texto {
     display: flex;
-    margin-top: 50px;
+}
+
+.container__section:nth-child(2) .container__grid {
+    justify-content: space-evenly;
 }
 
 .container__texto__sec {
@@ -92,6 +107,7 @@ a:hover {
     width: 15rem;
     height: 2rem;
     object-fit: cover;
+    margin-top: -20px;
 }
 
 .container__texto__sec h1 {
@@ -104,6 +120,16 @@ a:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.text__block {
+    display: flex;
+    flex-direction: column;
+    gap: 50px
+}
+
+.text__block:first-child {
+    margin-right: -25px;
 }
 
 .text__block p {
@@ -129,7 +155,6 @@ a:hover {
     font-family: "Libre Bodoni", serif;
     color: white;
     font-size: 96px;
-    margin-top: 15px;
 }
 
 .italic {
