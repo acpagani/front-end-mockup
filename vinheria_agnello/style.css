@@ -11,7 +11,10 @@ body {
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
+    transition: all;
 }
+
+/* BARRA DE ROLAGEM */
 
   /* Tamnho da Barra de Rolagem */
   ::-webkit-scrollbar {
@@ -26,6 +29,7 @@ body {
   /* Cor da Barra de Rolagem */
   ::-webkit-scrollbar-thumb {
     background: #891E19;
+    border-radius: 2px;
   }
   
   /* Cor da Barra de Rolagem ao passar por cima */
@@ -37,6 +41,8 @@ body {
 
 .header {
     background-image: url(Background__Header.png);
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
@@ -61,23 +67,24 @@ body {
     margin: 0;
 }
 
-li {
+.nav__bar li {
     margin: 2vh 2vw;
     margin-right: 70px;
     display: inline-block; 
 
 }
 
-a {
+.nav__bar li a {
     text-decoration: none;
     color: white;
     font-size: 24px;
     padding: 5px 10px;
 }
 
-a:hover {
+.nav__bar li a:hover {
     color: #891E19;
     cursor: pointer;
+    transition-duration: 0.3s;
 }
 
 /* CONTAINER GRID / DISPLAY */
@@ -145,7 +152,8 @@ a:hover {
 .text__block {
     display: flex;
     flex-direction: column;
-    gap: 50px
+    gap: 50px;
+    margin-bottom: 2rem;
 }
 
 .text__block:first-child {
@@ -154,7 +162,7 @@ a:hover {
 
 .text__block p {
     font-family: "GFS Didot", serif;
-    font-size: 36px;
+    font-size: 26px;
     color: black;
     background-color: white;
     padding: 40px 60px;
@@ -184,6 +192,11 @@ a:hover {
 .black {
     background-color: black;
     z-index: -2;
+}
+
+.gradient {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 70%, rgba(255,255,255,1) 100%);
 }
 
 .subtitulo {
