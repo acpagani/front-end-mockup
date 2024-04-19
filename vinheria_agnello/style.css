@@ -85,6 +85,8 @@ body {
     color: #891E19;
     cursor: pointer;
     transition-duration: 0.3s;
+    background-color: wheat;
+    border-radius: 10px;
 }
 
 /* CONTAINER GRID / DISPLAY */
@@ -94,9 +96,9 @@ body {
 }
 
 .header, .container__section {
-    height: 100vh;
+    min-height: 100vh;
     max-height: 1440px;
-    width: 100vw;
+    min-width: 100vw;
     max-width: 1200x;
     position: relative;
 }
@@ -156,7 +158,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.text__block:first-child {
+.text__display .text__block:first-child {
     margin-right: -25px;
 }
 
@@ -175,6 +177,44 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
+}
+
+/* TECEIRA SECTION THEY RECOMEND */
+
+.text__display__sec {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.text__display__sec .text__block:first-child {
+    margin-bottom: -120px
+}
+
+.text__display__sec .text__block {
+    max-width: 40%;
+    min-width: 40%;
+    align-items: center;
+}
+
+.text__display__sec .text__block p {
+    font-size: 20px;
+}
+
+.text__display__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text__display__sec .text__block {
+    gap: 25px;
+}
+
+.text__block img {
+    max-height: 130px;
+    max-width: 130px;
 }
 
 /* CONFIGURAÇÕES DE FORMATAÇÃO GERAIS */
@@ -199,7 +239,11 @@ body {
     background: linear-gradient(180deg, rgba(0,0,0,1) 70%, rgba(255,255,255,1) 100%);
 }
 
-.subtitulo {
+.white {
+    background-color: white;
+}
+
+.subtitulo h2 {
     font-family: "GFS Didot", serif;
     font-weight: 100;
     font-size: 36px;
