@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +13,8 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   transition: all;
+  width: 100%;
+  background-color: #000;
 }
 
 /* BARRA DE ROLAGEM */
@@ -44,6 +47,8 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  width: 100%;
+  padding-bottom: 10em;
 }
 
 .texto__header {
@@ -53,12 +58,25 @@ body {
 .texto__header .titulo img {
   margin-bottom: -50px;
 }
+.subtitulo.home {
+  margin-left: 0.6em;
+}
 
 /* NAV */
 
 .nav__bar {
   text-align: center;
   margin-top: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 18%,
+    rgba(0, 0, 0, 0.83) 40%,
+    rgba(0, 0, 0, 0) 62%
+  );
+  height: 12em;
+  width: 100%;
+  margin-top: -1em;
+  padding-top: 1em;
 }
 
 .nav__bar ul {
@@ -78,13 +96,12 @@ body {
   color: white;
   font-size: 24px;
   padding: 5px 10px;
+  transition: 300ms;
 }
 
 .nav__bar li a:hover {
   color: #891e19;
   cursor: pointer;
-  transition-duration: 0.3s;
-  background-color: wheat;
   border-radius: 10px;
 }
 
@@ -99,7 +116,7 @@ body {
   min-height: 100vh;
   max-height: 1440px;
   min-width: 100vw;
-  max-width: 1200x;
+  max-width: 1200px;
   position: relative;
 }
 
@@ -115,6 +132,8 @@ body {
   border-bottom: 1px solid white;
   width: 30%;
   margin: 0 auto;
+  margin-top: 5em;
+  margin-bottom: -2em;
 }
 
 /* SEGUNDA SECTION MADE FOR YOU */
@@ -131,14 +150,16 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+.subtitulo.made-fy {
+  color: #dfdfdf;
+  margin-top: 0.8em;
+}
 .container__texto__sec img {
   width: 15rem;
   height: 2rem;
   object-fit: cover;
   margin-top: -20px;
 }
-
 .container__texto__sec h1 {
   margin-bottom: 0%;
   margin-left: 1.5rem;
@@ -149,6 +170,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 8em;
 }
 
 .text__block {
@@ -179,15 +201,44 @@ body {
   z-index: -1;
 }
 
-/* TECEIRA SECTION THEY RECOMEND */
+.divisor.made-fy {
+  width: 30%;
+  margin-top: 25m;
+}
+.gradient.made-fy {
+  rotate: 180deg;
+  width: 100vw;
+  position: relative;
+  z-index: -1;
+  margin-left: -5em;
+  /* margin-top: 8.5em; */
+}
 
+/* TECEIRA SECTION THEY RECOMEND */
+.gradient-recommend {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  margin-top: 10em;
+  padding-bottom: 10em;
+}
+.divisor.recommend {
+  color: #000;
+  background-color: #000;
+  height: 32px;
+}
 .text__display__sec {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
 }
-
+h1.title {
+  color: red;
+}
 .text__display__sec .text__block:first-child {
   margin-bottom: -120px;
 }
@@ -217,6 +268,151 @@ body {
   max-width: 130px;
 }
 
+/* QUARTA SECTION PRODUCTS */
+.container__section.products {
+  margin-top: -0.1em;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  background: #fff url(../img/products-background.png) right;
+}
+.subtitulo.products {
+  width: 100%;
+  max-width: 28em;
+  color: #000;
+  font-size: 1.2em;
+  margin-top: 1em;
+  font-weight: 800;
+}
+.linha.products {
+  margin-top: -0.8em;
+  width: 8em;
+  margin-left: 4em;
+}
+.wine-time.products {
+  width: 15em;
+  position: absolute;
+  right: 2em;
+}
+.wave-wine.products {
+  width: 8em;
+  height: 48em;
+  position: absolute;
+  left: 0em;
+}
+.container__wine__display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 5em;
+}
+.wine__display {
+  position: relative;
+}
+.discount-image {
+  position: absolute;
+  top: -0.5em;
+  left: -1em;
+  background-color: white;
+  width: 5em;
+  border-radius: 25%;
+}
+.wine-image {
+  border: 3px solid #891e19;
+  border-radius: 8px;
+  position: relative;
+  padding: 1em;
+  width: 10em;
+  height: 18em;
+}
+.wine-image.first {
+  background: #fff url(../img/first-wine.png) no-repeat center;
+}
+.wine-image.second {
+  background: #fff url(../img/second-wine.png) no-repeat center;
+}
+.wine-image.third {
+  background: #fff url(../img/third-wine-custom.png) no-repeat center;
+}
+.price {
+  border: 3px solid #891e19;
+  background-color: #fff;
+  border-radius: 16px;
+  position: absolute;
+  right: -2.5em;
+  top: 17em;
+  width: 6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  font-weight: bold;
+}
+.rs {
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  font-size: 20px;
+}
+.main__price {
+  font-size: 42px;
+}
+.second__price {
+  font-size: 24px;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+.wine__description {
+  padding-top: 2.5em;
+  text-align: center;
+}
+.wine__description p {
+  font-style: italic;
+  margin-bottom: 0.3em;
+}
+.wine__description ul {
+  list-style: none;
+}
+.wine__description ul li {
+  font-weight: bold;
+  margin-bottom: 0.1em;
+}
+/* FOOTER SECTION PRODUCTS */
+.footer {
+  width: 100%;
+  display: flex;
+  padding: 1em;
+  padding: 1em 4em;
+}
+.footer__social-media {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    
+}
+.social-media__link {
+
+}
+.link__image {
+    width: 1.8em;
+}
+.link__image.maps {
+    width: 2.2em;
+    margin-left: -.35em;
+}
+.footer__text-content {
+    color: #b3b3b3;
+    text-align: center;
+    margin-left: 30%;
+}
+.footer__text-content span {
+    color: white;
+    font-weight: bold;
+}
 /* CONFIGURAÇÕES DE FORMATAÇÃO GERAIS */
 
 .titulo h1 {
@@ -234,26 +430,30 @@ body {
   z-index: -2;
 }
 
-.gradient {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 70%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-
 .white {
   background-color: white;
 }
 
-.subtitulo h2 {
+.subtitulo {
   font-family: 'GFS Didot', serif;
   font-weight: 100;
-  font-size: 36px;
-  color: white;
+  font-size: 28px;
+  color: #dfdfdf;
 }
 
 span {
   color: #891e19;
+}
+
+.gradient {
+  width: 100%;
+  height: 10em;
+  margin-top: 0em;
+  margin-bottom: -10em;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 10%,
+    rgba(0, 0, 0, 0.7959558823529411) 43%,
+    rgba(0, 0, 0, 1) 77%
+  );
 }
