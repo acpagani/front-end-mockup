@@ -26,7 +26,7 @@ submitBtn.addEventListener("click", function() {
   } else {
     alert("Por favor, insira uma idade válida."); // Inform user about invalid input
   }
-});+
+});
 
 
 // Display the modal when the document loads
