@@ -1,4 +1,6 @@
-Arthur Cotrick Pagani, RM 554510
-Diogo Leles Franciulli, RM 558487
-Felipe Sousa de Oliveira, RM 559085
-Ryan Brito Pereira Ramos, RM 554497
+## Integrantes do grupo
+
+Arthur Pagani - RM: 554510 <br>
+Diogo Franciulli - RM: 558487 <br>
+Felipe Oliveira - RM: 559085 <br>
+Ryan Brito - RM: 554497 <br>
