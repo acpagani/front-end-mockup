@@ -291,12 +291,7 @@ h1.title {
   position: absolute;
   right: 2em;
 }
-.wave-wine.products {
-  width: 8em;
-  height: 107vh;
-  position: absolute;
-  left: 0em;
-}
+
 .container__wine__display {
   display: flex;
   justify-content: center;
