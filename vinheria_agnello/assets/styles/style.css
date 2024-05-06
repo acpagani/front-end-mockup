@@ -135,6 +135,7 @@ body {
 
 .container__texto {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .container__section:nth-child(2) .container__grid {
